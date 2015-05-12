@@ -3536,7 +3536,7 @@ class TriviaTime(callbacks.Plugin):
             if rank['week'] > 0 or stat['points_week'] > 0 or stat['answer_week'] > 0:
                 hasPoints = True
                 infoList.append(' \x02This Week:\x02 #%d %d (%d)' % (rank['week'], stat['points_week'], stat['answer_week']))
-            if rank['month'] > 0 or stat['points_month'] > 0 or stat['answer_week'] > 0:
+            if rank['month'] > 0 or stat['points_month'] > 0 or stat['answer_month'] > 0:
                 hasPoints = True
                 infoList.append(' \x02This Month:\x02 #%d %d (%d)' % (rank['month'], stat['points_month'], stat['answer_month']))
             if rank['year'] > 0 or stat['points_year'] > 0 or stat['answer_year'] > 0:
@@ -3903,7 +3903,7 @@ class TriviaTime(callbacks.Plugin):
 
     def showdelete(self, irc, msg, arg, channel, num):
         """[<channel>] [<temp question #>]
-        Show a deleteion request pending approval.
+        Show a deletion request pending approval.
         Channel is only required when using the command outside of a channel.
         """
         hostmask = msg.prefix
